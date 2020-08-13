@@ -1,0 +1,31 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+
+<br> 
+
+<div class="col-md-6 offset-md-3">
+	<div class="badge badge-secondary"><h4>Authenticator Login</h4></div>
+	
+<form method="POST">
+
+	<br>
+
+	{% csrf_token %}
+	  <div class="form-group">
+	    
+	    <input type="text" class="form-control" placeholder="Enter Username" name="username">
+	   
+	  </div>
+
+	  <div class="form-group">
+	    
+	    <input type="password" class="form-control" placeholder="Enter Password" name="password">
+	  </div>
+	  
+	  <button type="submit" class="btn btn-secondary">Login</button>
+</form>
+
+</div>
+
+{% endblock %}
